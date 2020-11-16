@@ -120,7 +120,7 @@ namespace SelectionStatments
         /// <returns>The message with information about the type of integer.</returns>
         public static string GetTypeOfIntegerWithCascadedIfElse(object arg)
         {
-            // TODO #8: Add the method implementation. Restrictions: the method can only use the cascaded if...else statement; don't use  
+            // TODO #8: Add the method implementation. Restrictions: the method can only use the cascaded if...else statement.  
             throw new NotImplementedException();
         }
 
