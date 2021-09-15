@@ -121,6 +121,7 @@ namespace SelectionStatments
         public static string GetTypeOfIntegerWithCascadedIfElse(object arg)
         {
             // TODO #8: Add the method implementation. Restrictions: the method can only use the cascaded if...else statement.  
+            // Use Pattern matching https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching
             throw new NotImplementedException();
         }
 
@@ -141,6 +142,7 @@ namespace SelectionStatments
         public static string GetTypeOfIntegerWithSwitchStatement(object arg)
         {
             // TODO #9: Add the method implementation. Restrictions: the method can only use the switch statement.
+            // Use Pattern matching https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching
             throw new NotImplementedException();
         }
 
@@ -161,6 +163,7 @@ namespace SelectionStatments
         public static string GetTypeOfIntegerWithSwitchExpression(object arg)
         {
             // TODO #10: Add the method implementation. Restrictions: the method can only use the switch expression.
+            // Use Pattern matching https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching
             throw new NotImplementedException();
         }
 
@@ -187,6 +190,7 @@ namespace SelectionStatments
         public static byte GetLengthWithCascadedIfElse(int number)
         {
             // TODO #12: Add the method implementation. Restriction: the method can only use the cascaded if...else statement and comparison operations.
+            // Don't use ToString() method, loops or decimal logarithm.
             throw new NotImplementedException();
         }
         
@@ -198,6 +202,7 @@ namespace SelectionStatments
         public static byte GetLengthWithSwitchExpression(int number)
         {
             // TODO #13: Add the method implementation. Restriction: the method can only use the switch expression and comparison operations.
+            // Don't use ToString() method, loops or decimal logarithm.
             throw new NotImplementedException();
         }
         
