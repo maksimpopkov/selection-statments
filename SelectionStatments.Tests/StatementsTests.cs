@@ -1,9 +1,7 @@
-using System;
+﻿using System;
 using System.IO;
 using NUnit.Framework;
 using SelectionStatments;
-
-#pragma warning disable CA1707
 
 namespace SelectionStatements.Tests
 {
@@ -15,14 +13,14 @@ namespace SelectionStatements.Tests
         [SetUp]
         public void SetUp()
         {
-            writer = new StringWriter();
-            Console.SetOut(writer);
+            this.writer = new StringWriter();
+            Console.SetOut(this.writer);
         }
         
         [OneTimeTearDown] 
         public void Cleanup()
         {
-            writer.Close();
+            this.writer.Close();
         }
 
         [TestCase(7, -23, 13, 13)]
@@ -35,7 +33,7 @@ namespace SelectionStatements.Tests
         {
             Statements.WriteLargestWithNestedIfElse(first, second, third);
 
-            string actual = writer.GetStringBuilder().ToString().Trim();
+            string actual = this.writer.GetStringBuilder().ToString().Trim();
 
             string expected = $"Number {largest} is the largest";
 
@@ -52,7 +50,7 @@ namespace SelectionStatements.Tests
         {
             Statements.WriteLargestWithIfElseAndTernaryOperator(first, second, third);
 
-            string actual = writer.GetStringBuilder().ToString().Trim();
+            string actual = this.writer.GetStringBuilder().ToString().Trim();
 
             string expected = $"Number {largest} is the largest";
 
@@ -69,7 +67,7 @@ namespace SelectionStatements.Tests
         {
             Statements.WriteLargestWithIfElseAndConditionLogicalOperators(first, second, third);
 
-            string actual = writer.GetStringBuilder().ToString().Trim();
+            string actual = this.writer.GetStringBuilder().ToString().Trim();
 
             string expected = $"Number {largest} is the largest";
 
@@ -87,7 +85,7 @@ namespace SelectionStatements.Tests
         public string HowOldAreYouWithCascadedIfElseTests(int userAge)
         {
             Statements.HowOldAreYouReactionWithCascadedIfElse(userAge);
-            return writer.GetStringBuilder().ToString().Trim();
+            return this.writer.GetStringBuilder().ToString().Trim();
         }
 
         [TestCase(-90, ExpectedResult = "No downloads.")]
@@ -101,7 +99,7 @@ namespace SelectionStatements.Tests
         public string WriteInformationAboutDailyDownloadsWithCascadedIfElseTests(int countOfDailyDownloads)
         {
             Statements.WriteInformationAboutDailyDownloadsWithCascadedIfElse(countOfDailyDownloads);
-            return writer.GetStringBuilder().ToString().Trim();
+            return this.writer.GetStringBuilder().ToString().Trim();
         }
 
         [TestCase(Month.April, ExpectedResult = "It's spring now.")]
@@ -116,7 +114,7 @@ namespace SelectionStatements.Tests
         public string WriteTheInformationAboutSeasonsWithSwitchStatementTests(Month month)
         {
             Statements.WriteTheInformationAboutSeasonsWithSwitchStatement(month);
-            return writer.GetStringBuilder().ToString().Trim();
+            return this.writer.GetStringBuilder().ToString().Trim();
         }
 
         [TestCase(DayOfWeek.Sunday, ExpectedResult = "The weekend.")]
@@ -128,7 +126,7 @@ namespace SelectionStatements.Tests
         public string WriteTheInformationAboutDayWithIfElseTests(DayOfWeek dayOfWeek)
         {
             Statements.WriteTheInformationAboutDayWithIfElse(dayOfWeek);
-            return writer.GetStringBuilder().ToString().Trim();
+            return this.writer.GetStringBuilder().ToString().Trim();
         }
         
         [TestCase(DayOfWeek.Sunday, ExpectedResult = "The weekend.")]
@@ -140,7 +138,7 @@ namespace SelectionStatements.Tests
         public string WriteTheInformationAboutDayWithSwitchStatementTests(DayOfWeek dayOfWeek)
         {
             Statements.WriteTheInformationAboutDayWithSwitchStatement(dayOfWeek);
-            return writer.GetStringBuilder().ToString().Trim();
+            return this.writer.GetStringBuilder().ToString().Trim();
         }
 
         [TestCase(int.MinValue, ExpectedResult = 10)]
